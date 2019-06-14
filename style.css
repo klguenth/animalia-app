@@ -33,3 +33,15 @@ body {
 .hidden {
   display: none;
 }
+
+#resultsContainer {
+  display: inline-block;
+}
+
+#resultsContainerInfo {
+  float: left;
+}
+
+#resultsContainerVideo {
+  float: right;
+}
