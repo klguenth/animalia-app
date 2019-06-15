@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Animal Conservation</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <header role="header">
-      <h1 class="header">Animalia</h1>
-    </header>
 
-    <form id="searchContainer">
-      <input type="text" id="searchTerm" placeholder="Enter a scientific name here">
-      <input type="submit" id="submitButton" placeholder="Submit">
-    </form>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Animal Conservation</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
 
-    <p id="errorMessage" class="errorMessage"></p>
+<body>
+  <header role="header">
+    <h1 class="header">Animalia</h1>
+  </header>
 
-    <section id="resultsContainerInfo" class="hidden">
-      <h2>Search Results</h2>
-      <ul id="resultsList">
-      </ul>
-    </section>
+  <form id="searchContainer">
+    <input type="text" id="searchTerm" placeholder="Enter a scientific name here">
+    <input type="submit" id="submitButton" placeholder="Submit">
+  </form>
 
-    <section id="resultsContainerVideo" class="hidden">
-      <h2>Related Videos</h2>
-      <ul id="videoList">
-      </ul>
-    </section>
+  <p id="errorMessage" class="errorMessage"></p>
 
-    <script src="index.js"></script>
-  </body>
+  <section id="resultsContainerInfo" class="hidden">
+    <h2>Search Results</h2>
+    <ul id="resultsList">
+    </ul>
+  </section>
+
+  <section id="resultsContainerVideo" class="hidden">
+    <h2>Related Videos</h2>
+    <ul id="videoList">
+    </ul>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
