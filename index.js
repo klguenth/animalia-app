@@ -1,6 +1,6 @@
 'use strict'
 
-const youtubeApiKey = ''
+const youtubeApiKey = 'AIzaSyAFe_P5hJr88I8OS3HbmX_jsTF91XrNpl4'
 const youtubeUrl = 'https://www.googleapis.com/youtube/v3/search'
 const gbifUrl = 'http://api.gbif.org/v1/species/search'
 
