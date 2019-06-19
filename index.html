@@ -7,30 +7,38 @@
   <title>Animal Conservation</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="image/pawPrint.png">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <header role="header">
-    <h1 class="header">Animalia</h1>
-  </header>
+  <h1 class="header">Animalia</h1>
+  <h2 class="headerInfo">Our hope is that this application will help to give people a glimpse of the amazing animals
+    that
+    call this world home.</h2>
+  <h3 class="headerQuote"><q>For in the end, we will conserve only what we love; we will love only what we understand;
+      we understand only what we are taught.</q> -Baba Dioum</h3>
 
   <form id="searchContainer">
-    <input type="text" id="searchTerm" placeholder="Enter a scientific name here">
-    <input type="submit" id="submitButton" placeholder="Submit">
+    <label for="searchTerm">
+      <input type="text" id="searchTerm" placeholder="Enter a scientific name here"></label>
+    <label for="submitButton">
+      <input type="submit" id="submitButton" placeholder="Submit"></label>
   </form>
 
-  <p id="errorMessage" class="errorMessage"></p>
+  <h3>For specific results, search by scientific name. For non-specific results, search by common name.</h3>
 
-  <section id="resultsContainerInfo" class="hidden">
-    <h2>Search Results</h2>
-    <ul id="resultsList">
-    </ul>
-  </section>
+  <p id="errorMessage" class="errorMessage"></p>
 
   <section id="resultsContainerVideo" class="hidden">
     <h2>Related Videos</h2>
     <ul id="videoList">
+    </ul>
+  </section>
+
+  <section id="resultsContainerInfo" class="hidden">
+    <h2>Search Results</h2>
+    <ul id="resultsList">
     </ul>
   </section>
 

@@ -12,8 +12,7 @@ function queryParams(params) {
 
 function getSpecies(searchTerm) {
   const speciesParams = {
-    q: searchTerm,
-    facet: "type"
+    q: searchTerm
   };
   const queryList = queryParams(speciesParams)
   const speciesUrl = gbifUrl + '?' + queryList;
@@ -21,7 +20,6 @@ function getSpecies(searchTerm) {
   fetch(speciesUrl)
     .then(response => {
       return response.json();
-      console.log(responseJson);
     })
     .then(responseJson => {
       showSearchResults(responseJson);
@@ -42,7 +40,6 @@ function getVideos(searchTerm) {
   };
   const queryString = queryParams(params)
   const url = youtubeUrl + '?' + queryString;
-  console.log(url);
 
   fetch(url)
     .then(response => {
@@ -53,7 +50,6 @@ function getVideos(searchTerm) {
     })
     .catch(err => {
       $('#errorMessage').text(`Something went wrong: ${err.message}`);
-      console.log(err);
     });
 }
 
@@ -64,6 +60,8 @@ function showSearchResults(responseJson) {
       `<li>
         <h2>${responseJson.results[i].species}</h2>
         <p>${responseJson.results[i].scientificName}</p>
+        <p>${responseJson.results[i].kingdom}</p>
+        <p>${responseJson.results[i].genus}</p>
       </li>`
     )
   };
@@ -71,14 +69,13 @@ function showSearchResults(responseJson) {
 }
 
 function showVideoResults(responseJson) {
-  console.log(responseJson);
   $('#videoList').empty();
   for (let i = 0; i < responseJson.items.length; i++) {
     $('#videoList').append(
       `<li>
       <p>${responseJson.items[i].snippet.title}</p>
       <a href='https://www.youtube.com/watch?v=${responseJson.items[i].id.videoId}' target='_blank'>
-        <img src='${responseJson.items[i].snippet.thumbnails.medium.url}'/>
+        <img src='${responseJson.items[i].snippet.thumbnails.medium.url}' alt="animal video"/>
       </a>
      </li>`
     )
