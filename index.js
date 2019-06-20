@@ -10,6 +10,7 @@ function queryParams(params) {
   return queryItems.join('&');
 }
 
+//add parameters to url and fetch data from GBIF API
 function getSpecies(searchTerm) {
   const speciesParams = {
     q: searchTerm
@@ -30,6 +31,7 @@ function getSpecies(searchTerm) {
     });
 }
 
+//add parameters to url and fetch data from YouTube API
 function getVideos(searchTerm) {
   const params = {
     key: 'AIzaSyAFe_P5hJr88I8OS3HbmX_jsTF91XrNpl4',
@@ -53,6 +55,7 @@ function getVideos(searchTerm) {
     });
 }
 
+//display search results from GBIF API
 function showSearchResults(responseJson) {
   $('#resultsList').empty();
   for (let i = 0; i < responseJson.results.length; i++) {
@@ -68,6 +71,7 @@ function showSearchResults(responseJson) {
   $('#resultsContainerInfo').removeClass('hidden');
 }
 
+//display search results from YouTube API
 function showVideoResults(responseJson) {
   $('#videoList').empty();
   for (let i = 0; i < responseJson.items.length; i++) {
@@ -83,6 +87,7 @@ function showVideoResults(responseJson) {
   $('#resultsContainerVideo').removeClass('hidden');
 };
 
+//watch for submit and call functions
 function watchForm() {
   $('#searchContainer').submit(event => {
     event.preventDefault();
