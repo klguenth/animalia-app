@@ -74,19 +74,38 @@ h3 {
 
 #resultsContainerInfo {
   float: left;
+  text-align: center;
+  margin-left: 30px;
 }
 
 #resultsContainerVideo {
   float: right;
+  text-align: center;
+}
+
+#resultsList {
+  list-style-type: none;
+}
+
+#videoList {
+  list-style-type: none;
+}
+
+##resultsContainerInfo h2 {
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 
   #resultsContainerInfo {
     width: 100%;
+    float: center;
+    text-align: center;
   }
 
   #resultsContainerVideo {
     width: 100%;
+    float: center;
+    text-align: center;
   }
 }
